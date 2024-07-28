@@ -20,3 +20,10 @@ export interface ISinglePost {
   post: IPost;
   user: IUsersPostDetails;
 }
+
+export interface ICreatePost {
+  post: {
+    title: string;
+    body: string;
+  };
+}

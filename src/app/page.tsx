@@ -6,6 +6,7 @@ import { getAllPosts } from "@/services/posts/posts.service";
 import { Suspense, useEffect, useState } from "react";
 import { LinearProgress } from "@mui/material";
 import AllPosts from "@/components/AllPosts";
+import Link from "next/link";
 
 export default function Home() {
   const [posts, setPosts] = useState<IAllPosts | null>(null);
@@ -38,6 +39,14 @@ export default function Home() {
       >
         <AllPosts posts={posts} />
       </Suspense>
+      <div className="fixed bottom-0 w-full flex justify-center p-4 bg-transparent shadow-md">
+        <Link
+          href="/create_post"
+          className="w-auto text-white rounded-full bg-black px-5 py-3"
+        >
+          Post something
+        </Link>
+      </div>
     </main>
   );
 }

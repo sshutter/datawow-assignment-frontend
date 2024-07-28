@@ -12,13 +12,13 @@ export default function Login() {
 
   const handleSubmit = async (loginForm: FormData) => {
     try {
-      const result = await signIn("credentials", {
+      const res = await signIn("credentials", {
         email: loginForm.get("email") as string,
         password: loginForm.get("password") as string,
         redirect: false,
       });
 
-      if (result?.error) {
+      if (res?.error) {
         setError(true);
         return;
       }

@@ -1,6 +1,7 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
+import LoggedInMenu from "./LoggedInDropdown";
 import { Link } from "@mui/material";
 
 export default async function TopMenu() {
@@ -18,14 +19,9 @@ export default async function TopMenu() {
         />
       </Link>
       {session ? (
-        <Link
-          href="/api/auth/signout"
-          className="flex items-center absolute right-0 h-full px-2 text-black no-underline hover:underline"
-        >
-          <div className="justify-end flex flex-row w-full h-auto space-x-6">
-            Sign-Out of {session.user?.first_name}
-          </div>
-        </Link>
+        <div className="flex items-center absolute right-0 h-full px-2 text-black no-underline hover:underline">
+          <LoggedInMenu userName={`${session.user.first_name}`} />
+        </div>
       ) : (
         <Link
           href="/api/auth/signin"

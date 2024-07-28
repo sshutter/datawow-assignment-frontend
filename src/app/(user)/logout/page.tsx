@@ -1,6 +1,6 @@
 "use client";
 
-import { logout } from "@/services/user/user.service";
+import { logout } from "@/services/users/user.service";
 import { Button } from "@mui/material";
 import { signOut } from "next-auth/react";
 

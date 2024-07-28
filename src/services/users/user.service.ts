@@ -63,3 +63,21 @@ export const register = async (registerData: IRegister) => {
     throw error;
   }
 };
+
+// Get Me
+export const getMe = async (authJwt: string) => {
+  try {
+    const res = await fetch(`${USER_SERVICE_URL}/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": `Bearer ${authJwt}`,
+      },
+    });
+
+    return res.json();
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};

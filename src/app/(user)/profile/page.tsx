@@ -2,7 +2,7 @@ import { withAuth } from "@/lib/withAuth";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Button, Link } from "@mui/material";
-import { getMe } from "@/services/users/user.service";
+import { getMe } from "@/services/users/users.service";
 
 async function Profile() {
   const session = await getServerSession(authOptions);

@@ -1,5 +1,5 @@
 import { ILogin } from "@/interfaces/login.interface";
-import { login } from "@/services/users/user.service";
+import { login } from "@/services/users/users.service";
 import NextAuth from "next-auth";
 import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";

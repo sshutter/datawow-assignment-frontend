@@ -4,7 +4,7 @@ import { Menu, Button, MenuItem } from "@mui/material";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
-import { logout } from "@/services/users/user.service";
+import { logout } from "@/services/users/users.service";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 

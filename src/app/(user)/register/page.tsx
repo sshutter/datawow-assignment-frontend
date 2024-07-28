@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import { redirect } from "next/navigation";
 import { IRegister } from "@/interfaces/register.interface";
-import { register } from "@/services/users/user.service";
+import { register } from "@/services/users/users.service";
 
 export default function Register() {
   const [passwordError, setPasswordError] = useState(false);

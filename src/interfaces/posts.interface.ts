@@ -27,3 +27,15 @@ export interface ICreatePost {
     body: string;
   };
 }
+
+export interface IMySinglePost {
+  success: boolean;
+  post: IPost;
+}
+
+export interface IUpdatePost {
+  post: {
+    title: string;
+    body: string;
+  };
+}

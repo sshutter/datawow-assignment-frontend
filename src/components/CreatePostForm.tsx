@@ -2,10 +2,10 @@
 
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { ICreatePost } from "@/interfaces/posts.interface";
-import { withAuth } from "@/lib/withAuth";
 import { createPost } from "@/services/posts/posts.service";
 import { Button } from "@mui/material";
 import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 import { title } from "process";
 
 export default function CreatePostForm() {
@@ -18,6 +18,7 @@ export default function CreatePostForm() {
     };
 
     await createPost(createPostForm);
+    redirect("/");
   };
 
   return (

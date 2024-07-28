@@ -6,7 +6,7 @@ import { Link } from "@mui/material";
 
 export default async function TopMenu() {
   const session = await getServerSession(authOptions);
-  console.log(session);
+
   return (
     <div className="h-[50px] bg-white fixed top-0 right-0 left-0 z-10 flex flex-row items-center justify-center border-b-2">
       <Link href="/" className="h-[70%] w-auto">

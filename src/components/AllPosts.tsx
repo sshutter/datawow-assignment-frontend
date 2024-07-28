@@ -1,9 +1,15 @@
 import PostCard from "@/components/PostCard";
 import { IAllPosts, IPost } from "@/interfaces/posts.interface";
 
-export default async function AllPosts({ posts }: { posts: IAllPosts }) {
+export default async function AllPosts({
+  posts,
+  href,
+}: {
+  posts: IAllPosts;
+  href: string;
+}) {
   const postReady = await posts;
-  console.log(postReady);
+
   return (
     <div className="text-black w-full">
       {postReady.posts.map((post: IPost) => (
@@ -12,8 +18,10 @@ export default async function AllPosts({ posts }: { posts: IAllPosts }) {
           id={post.id}
           title={post.title}
           body={post.body}
+          href={href}
         />
       ))}
     </div>
   );
 }
+3;

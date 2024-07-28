@@ -62,6 +62,15 @@ export default function LoggedInMenu({ userName }: { userName: string }) {
         </MenuItem>
         <MenuItem
           onClick={() => {
+            router.push("/my_posts");
+            handleClose();
+          }}
+          className="text-primary font-serif"
+        >
+          Manage posts
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
             handleLogout();
           }}
           className="text-primary font-serif"

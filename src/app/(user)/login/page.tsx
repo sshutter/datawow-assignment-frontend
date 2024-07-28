@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Login() {
   const [error, setError] = useState<boolean>(false);
@@ -75,6 +76,17 @@ export default function Login() {
                 Invalid Email or Password
               </div>
             ) : null}
+            <div className="text-black px-4 text-end">
+              <span>
+                Do not have an account?{" "}
+                <Link
+                  href="/register"
+                  className="font-extrabold underline hover:text-blue-700"
+                >
+                  Register
+                </Link>
+              </span>
+            </div>
             <div className="flex justify-center">
               <Button
                 type="submit"

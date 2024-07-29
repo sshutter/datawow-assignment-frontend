@@ -18,19 +18,19 @@ Before you begin, ensure you have the following installed on your system:
 ## **Setup Instructions**
 
 To set up and run the application locally, follow these steps:
-1. Clone the repository
+1. **Clone the repository**
 
   ```
     $ git clone https://github.com/sshutter/datawow-assignment-frontend.git
 
     $ cd datawow-assignment-frontend
   ```
-2. Install dependencies
+2. **Install dependencies**
   
   ```
     $ npm install
   ```
-3. Set Up environment
+3. **Set Up environment**
    
     Create a `.env.local` file in the root directory based on the provided `.env.template` file.
 
@@ -41,7 +41,7 @@ To set up and run the application locally, follow these steps:
     NEXT_PUBLIC_BACKEND_PORT=5001
   ```
 
-4. Run the Next.js application in development mode 🚀
+4. **Run the Next.js application in development mode** 🚀
   
   ```
     $ npm run dev

@@ -39,7 +39,7 @@ export default function MySinglePost({ post }: { post: IPost }) {
               router.push(`/my_posts/edit/${post.id}`);
             }}
           >
-            Edit studio
+            Edit Post
           </Button>
           <DeleteDialog
             open={isDialogOpen}

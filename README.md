@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **DATA WOW Take Home Assignment (frontend)**
 
-## Getting Started
+This is a Next.js frontend for a Ruby on Rails application designed as part of the Datawow take-home exercise. It allows users to create, read, update, and delete (CRUD) posts. The application includes secure user authentication to manage user access.
 
-First, run the development server:
+## **Prerequisites**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Before you begin, ensure you have the following installed on your system:
+- NPM (Node Packages Manager)
+  ```bash
+    $ brew install node
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    # Verify installation
+    $ node -v 
+    $ npm -v
+  ```
+- Git: [Getting start with Git](https://docs.github.com/en/get-started/getting-started-with-git)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Setup Instructions**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To set up and run the application locally, follow these steps:
+1. Clone the repository
 
-## Learn More
+  ```
+    $ git clone https://github.com/sshutter/datawow-assignment-frontend.git
 
-To learn more about Next.js, take a look at the following resources:
+    $ cd datawow-assignment-frontend
+  ```
+2. Install dependencies
+  
+  ```
+    $ npm install
+  ```
+3. Set Up environment
+   
+    Create a `.env.local` file in the root directory based on the provided `.env.template` file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Example:
+  ```
+    NEXTAUTH_URL=http://localhost:3000
+    NEXTAUTH_SECRET=secret
+    NEXT_PUBLIC_BACKEND_PORT=5001
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Run the Next.js application in development mode 🚀
+  
+  ```
+    $ npm run dev
+  ```
